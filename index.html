@@ -15,23 +15,34 @@
 </head>
 
 <body>
-    <div class="container">
+    <header class=" container-fluid p-2 mb-2 bg-info">
+        <h3>Just a Weather Thing</h3>
+    </header>
+    <main>
         <form>
-            <div class="row">
-                <div class="col">
-                    <input type="text" id="zipcode" class="form-control" placeholder="Enter Zipcode">
+            <div class="container">
 
-                </div>
-                <div class="col">
-                    <input type="button" id="get-weather" value="Get Weather">
+                <div class="row align-items-middle mb-2">
+                    <div class="col">
+                        <span class="float-end"><label for="zipcode" ><b>Enter a zipcode: </b></label></span>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="zipcode" class="form-control" value="90210" class="mb-2">
+                    </div>
+                    <div class="col">
+                        <input type="button" class="btn btn-primary" id="get-weather" value="Get Weather">
+                    </div>
                 </div>
             </div>
         </form>
-        <div id="response-weather">
-            
+        <div id="spin" class="spinner-border text-primary d-none" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
-    </div>
+        <div id="response-weather" class="">
 
+        </div>
+
+    </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -43,7 +54,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 
